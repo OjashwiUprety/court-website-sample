@@ -80,11 +80,40 @@
     .form-section button:hover {
       background-color: #003060;
     }
-    .accessibility {
+    .accessibility,
+    .schedule,
+    .services,
+    .contact {
       margin-top: 30px;
       padding: 15px;
       background-color: #e0f7fa;
       border-left: 5px solid #00796b;
+    }
+    .dashboard {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #f0f8ff;
+      border-left: 5px solid #4682b4;
+    }
+    .dashboard h3 {
+      margin-top: 0;
+    }
+    .metrics {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .metric-card {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+      flex: 1 1 45%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .metric-card h4 {
+      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -94,24 +123,26 @@
     <p>Serving the Public with Fairness and Transparency</p>
   </header>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Court Schedules</a>
-    <a href="#">Online Services</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#schedule">Court Schedules</a>
+    <a href="#services">Online Services</a>
+    <a href="#contact-section">Contact</a>
   </nav>
   <main>
-    <div class="alert" role="alert" aria-label="Important Notice">
-      ⚠️ Court operations are modified due to inclement weather. See updates here.
-    </div>
-    <h2>Welcome to the Erie County Courts Website</h2>
-    <p>
-      This website provides access to court services, schedules, and digital resources. We are committed
-      to providing accessible and secure online information for the public and court staff.
-    </p>
+    <section id="home">
+      <div class="alert" role="alert" aria-label="Important Notice">
+        ⚠️ Court operations are modified due to inclement weather. See updates here.
+      </div>
+      <h2>Welcome to the Erie County Courts Website</h2>
+      <p>
+        This website provides access to court services, schedules, and digital resources. We are committed
+        to providing accessible and secure online information for the public and court staff.
+      </p>
+    </section>
 
-    <div class="form-section">
+    <section class="form-section" id="contact-section">
       <h3>Public Inquiry Form</h3>
-      <form>
+      <form action="https://formspree.io/f/xldjppvn" method="POST">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required />
 
@@ -123,9 +154,19 @@
 
         <button type="submit">Submit Inquiry</button>
       </form>
-    </div>
+    </section>
 
-    <div class="accessibility">
+    <section class="schedule" id="schedule">
+      <h3>Court Schedules</h3>
+      <p><em>Mock schedule content: Monday–Friday, 8:30 AM – 4:30 PM. Courtroom availability may vary by department.</em></p>
+    </section>
+
+    <section class="services" id="services">
+      <h3>Online Services</h3>
+      <p><em>Mock service content: Access case lookup, pay citations, or request transcripts online.</em></p>
+    </section>
+
+    <section class="accessibility">
       <h3>Accessibility Features</h3>
       <ul>
         <li>Keyboard navigable elements with visible focus outlines</li>
@@ -134,7 +175,30 @@
         <li>Responsive layout for mobile and low-bandwidth environments</li>
         <li>Clear and consistent navigation structure</li>
       </ul>
+    </section>
+
+    <div class="dashboard">
+      <h3>Website Analytics Dashboard (Mock Data)</h3>
+      <div class="metrics">
+        <div class="metric-card">
+          <h4>Total Monthly Visits</h4>
+          <p><strong>15,240</strong></p>
+        </div>
+        <div class="metric-card">
+          <h4>Bounce Rate</h4>
+          <p><strong>42%</strong></p>
+        </div>
+        <div class="metric-card">
+          <h4>Most Visited Page</h4>
+          <p><strong>Court Schedules</strong></p>
+        </div>
+        <div class="metric-card">
+          <h4>Mobile Users</h4>
+          <p><strong>61%</strong></p>
+        </div>
+      </div>
     </div>
+
   </main>
   <footer>
     &copy; 2025 Erie County Courts | Accessibility | Privacy Policy
